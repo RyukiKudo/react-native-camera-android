@@ -9,13 +9,13 @@ import android.os.AsyncTask;
 import android.support.media.ExifInterface;
 import android.util.Base64;
 
-import org.reactnative.camera.RNCameraViewHelper;
-import org.reactnative.camera.utils.RNFileUtils;
-
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
+
+import org.reactnative.camera.StreamingCameraViewHelper;
+import org.reactnative.camera.utils.StreamingFileUtils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -23,7 +23,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class ResolveTakenPictureAsyncTask extends AsyncTask<Void, Void, WritableMap> {
+public class StreamingResolveTakenPictureAsyncTask extends AsyncTask<Void, Void, WritableMap> {
     private static final String ERROR_TAG = "E_TAKING_PICTURE_FAILED";
     private Promise mPromise;
     private byte[] mImageData;
@@ -32,7 +32,7 @@ public class ResolveTakenPictureAsyncTask extends AsyncTask<Void, Void, Writable
     private Bitmap mBitmap;
     private PictureSavedDelegate mPictureSavedDelegate;
 
-    public ResolveTakenPictureAsyncTask(byte[] imageData, Promise promise, ReadableMap options, File cacheDirectory, PictureSavedDelegate delegate) {
+    public StreamingResolveTakenPictureAsyncTask(byte[] imageData, Promise promise, ReadableMap options, File cacheDirectory, PictureSavedDelegate delegate) {
         mPromise = promise;
         mOptions = options;
         mImageData = imageData;
@@ -52,7 +52,7 @@ public class ResolveTakenPictureAsyncTask extends AsyncTask<Void, Void, Writable
         if (mOptions.hasKey("skipProcessing")) {
             try {
                 // Prepare file output
-                File imageFile = new File(RNFileUtils.getOutputFilePath(mCacheDirectory, ".jpg"));
+                File imageFile = new File(StreamingFileUtils.getOutputFilePath(mCacheDirectory, ".jpg"));
                 imageFile.createNewFile();
                 FileOutputStream fOut = new FileOutputStream(imageFile);
 
@@ -102,7 +102,13 @@ public class ResolveTakenPictureAsyncTask extends AsyncTask<Void, Void, Writable
 
                 // Write Exif data to the response if requested
                 if (mOptions.hasKey("exif") && mOptions.getBoolean("exif")) {
-                    WritableMap exifData = RNCameraViewHelper.getExifData(exifInterface);
+                    WritableMap exifData = StreamingCameraViewHelper.getExifData(exifInterface);
+                    response.putMap("exif", exifData);
+                }
+
+                // Write Exif data to the response if requested
+                if (mOptions.hasKey("exif") && mOptions.getBoolean("exif")) {
+                    WritableMap exifData = StreamingCameraViewHelper.getExifData(exifInterface);
                     response.putMap("exif", exifData);
                 }
 
@@ -199,7 +205,7 @@ public class ResolveTakenPictureAsyncTask extends AsyncTask<Void, Void, Writable
         FileOutputStream outputStream = null;
 
         try {
-            outputPath = RNFileUtils.getOutputFilePath(mCacheDirectory, ".jpg");
+            outputPath = StreamingFileUtils.getOutputFilePath(mCacheDirectory, ".jpg");
             outputStream = new FileOutputStream(outputPath);
             inputStream.writeTo(outputStream);
         } catch (IOException e) {

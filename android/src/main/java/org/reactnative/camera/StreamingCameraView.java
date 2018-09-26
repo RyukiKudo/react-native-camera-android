@@ -22,11 +22,11 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.MultiFormatReader;
 import com.google.zxing.Result;
-import org.reactnative.barcodedetector.RNBarcodeDetector;
+import org.reactnative.barcodedetector.StreamingBarcodeDetector;
 import org.reactnative.camera.tasks.*;
 import org.reactnative.camera.utils.ImageDimensions;
-import org.reactnative.camera.utils.RNFileUtils;
-import org.reactnative.facedetector.RNFaceDetector;
+import org.reactnative.camera.utils.StreamingFileUtils;
+import org.reactnative.facedetector.StreamingFaceDetector;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,8 +34,8 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class StreamingCameraView extends CameraView implements LifecycleEventListener, BarCodeScannerAsyncTaskDelegate, FaceDetectorAsyncTaskDelegate,
-    BarcodeDetectorAsyncTaskDelegate, TextRecognizerAsyncTaskDelegate, PictureSavedDelegate {
+public class StreamingCameraView extends CameraView implements LifecycleEventListener, BarCodeScannerAsyncTaskDelegate, StreamingFaceDetectorAsyncTaskDelegate,
+    StreamingBarcodeDetectorAsyncTaskDelegate, TextRecognizerAsyncTaskDelegate, PictureSavedDelegate {
   private ThemedReactContext mThemedReactContext;
   private Queue<Promise> mPictureTakenPromises = new ConcurrentLinkedQueue<>();
   private Map<Promise, ReadableMap> mPictureTakenOptions = new ConcurrentHashMap<>();
@@ -55,16 +55,16 @@ public class StreamingCameraView extends CameraView implements LifecycleEventLis
 
   // Scanning-related properties
   private MultiFormatReader mMultiFormatReader;
-  private RNFaceDetector mFaceDetector;
-  private RNBarcodeDetector mGoogleBarcodeDetector;
+  private StreamingFaceDetector mFaceDetector;
+  private StreamingBarcodeDetector mGoogleBarcodeDetector;
   private TextRecognizer mTextRecognizer;
   private boolean mShouldDetectFaces = false;
   private boolean mShouldGoogleDetectBarcodes = false;
   private boolean mShouldScanBarCodes = false;
   private boolean mShouldRecognizeText = false;
-  private int mFaceDetectorMode = RNFaceDetector.FAST_MODE;
-  private int mFaceDetectionLandmarks = RNFaceDetector.NO_LANDMARKS;
-  private int mFaceDetectionClassifications = RNFaceDetector.NO_CLASSIFICATIONS;
+  private int mFaceDetectorMode = StreamingFaceDetector.FAST_MODE;
+  private int mFaceDetectionLandmarks = StreamingFaceDetector.NO_LANDMARKS;
+  private int mFaceDetectionClassifications = StreamingFaceDetector.NO_CLASSIFICATIONS;
   private int mGoogleVisionBarCodeType = Barcode.ALL_FORMATS;
 
   public StreamingCameraView(ThemedReactContext themedReactContext) {
@@ -105,7 +105,7 @@ public class StreamingCameraView extends CameraView implements LifecycleEventLis
         if (mVideoRecordedPromise != null) {
           if (path != null) {
             WritableMap result = Arguments.createMap();
-            result.putString("uri", RNFileUtils.uriFromFile(new File(path)).toString());
+            result.putString("uri", StreamingFileUtils.uriFromFile(new File(path)).toString());
             mVideoRecordedPromise.resolve(result);
           } else {
             mVideoRecordedPromise.reject("E_RECORDING", "Couldn't stop recording - there is none in progress");
@@ -118,8 +118,8 @@ public class StreamingCameraView extends CameraView implements LifecycleEventLis
       public void onFramePreview(CameraView cameraView, byte[] data, int width, int height, int rotation) {
         int correctRotation = StreamingCameraViewHelper.getCorrectCameraRotation(rotation, getFacing());
         boolean willCallBarCodeTask = mShouldScanBarCodes && !barCodeScannerTaskLock && cameraView instanceof BarCodeScannerAsyncTaskDelegate;
-        boolean willCallFaceTask = mShouldDetectFaces && !faceDetectorTaskLock && cameraView instanceof FaceDetectorAsyncTaskDelegate;
-        boolean willCallGoogleBarcodeTask = mShouldGoogleDetectBarcodes && !googleBarcodeDetectorTaskLock && cameraView instanceof BarcodeDetectorAsyncTaskDelegate;
+        boolean willCallFaceTask = mShouldDetectFaces && !faceDetectorTaskLock && cameraView instanceof StreamingFaceDetectorAsyncTaskDelegate;
+        boolean willCallGoogleBarcodeTask = mShouldGoogleDetectBarcodes && !googleBarcodeDetectorTaskLock && cameraView instanceof StreamingBarcodeDetectorAsyncTaskDelegate;
         boolean willCallTextTask = mShouldRecognizeText && !textRecognizerTaskLock && cameraView instanceof TextRecognizerAsyncTaskDelegate;
         if (!willCallBarCodeTask && !willCallFaceTask && !willCallGoogleBarcodeTask && !willCallTextTask) {
           return;
@@ -137,14 +137,14 @@ public class StreamingCameraView extends CameraView implements LifecycleEventLis
 
         if (willCallFaceTask) {
           faceDetectorTaskLock = true;
-          FaceDetectorAsyncTaskDelegate delegate = (FaceDetectorAsyncTaskDelegate) cameraView;
-          new FaceDetectorAsyncTask(delegate, mFaceDetector, data, width, height, correctRotation).execute();
+          StreamingFaceDetectorAsyncTaskDelegate delegate = (StreamingFaceDetectorAsyncTaskDelegate) cameraView;
+          new StreamingFaceDetectorAsyncTask(delegate, mFaceDetector, data, width, height, correctRotation).execute();
         }
 
         if (willCallGoogleBarcodeTask) {
           googleBarcodeDetectorTaskLock = true;
-          BarcodeDetectorAsyncTaskDelegate delegate = (BarcodeDetectorAsyncTaskDelegate) cameraView;
-          new BarcodeDetectorAsyncTask(delegate, mGoogleBarcodeDetector, data, width, height, correctRotation).execute();
+          StreamingBarcodeDetectorAsyncTaskDelegate delegate = (StreamingBarcodeDetectorAsyncTaskDelegate) cameraView;
+          new StreamingBarcodeDetectorAsyncTask(delegate, mGoogleBarcodeDetector, data, width, height, correctRotation).execute();
         }
 
         if (willCallTextTask) {
@@ -240,7 +240,7 @@ public class StreamingCameraView extends CameraView implements LifecycleEventLis
 
   public void record(ReadableMap options, final Promise promise, File cacheDirectory) {
     try {
-      String path = options.hasKey("path") ? options.getString("path") : RNFileUtils.getOutputFilePath(cacheDirectory, ".mp4");
+      String path = options.hasKey("path") ? options.getString("path") : StreamingFileUtils.getOutputFilePath(cacheDirectory, ".mp4");
       int maxDuration = options.hasKey("maxDuration") ? options.getInt("maxDuration") : -1;
       int maxFileSize = options.hasKey("maxFileSize") ? options.getInt("maxFileSize") : -1;
 
@@ -310,7 +310,7 @@ public class StreamingCameraView extends CameraView implements LifecycleEventLis
    * Initial setup of the face detector
    */
   private void setupFaceDetector() {
-    mFaceDetector = new RNFaceDetector(mThemedReactContext);
+    mFaceDetector = new StreamingFaceDetector(mThemedReactContext);
     mFaceDetector.setMode(mFaceDetectorMode);
     mFaceDetector.setLandmarkType(mFaceDetectionLandmarks);
     mFaceDetector.setClassificationType(mFaceDetectionClassifications);
@@ -365,7 +365,7 @@ public class StreamingCameraView extends CameraView implements LifecycleEventLis
     StreamingCameraViewHelper.emitFacesDetectedEvent(this, facesDetected, dimensions);
   }
 
-  public void onFaceDetectionError(RNFaceDetector faceDetector) {
+  public void onFaceDetectionError(StreamingFaceDetector faceDetector) {
     if (!mShouldDetectFaces) {
       return;
     }
@@ -382,7 +382,7 @@ public class StreamingCameraView extends CameraView implements LifecycleEventLis
    * Initial setup of the barcode detector
    */
   private void setupBarcodeDetector() {
-    mGoogleBarcodeDetector = new RNBarcodeDetector(mThemedReactContext);
+    mGoogleBarcodeDetector = new StreamingBarcodeDetector(mThemedReactContext);
     mGoogleBarcodeDetector.setBarcodeType(mGoogleVisionBarCodeType);
   }
 
@@ -410,7 +410,7 @@ public class StreamingCameraView extends CameraView implements LifecycleEventLis
     StreamingCameraViewHelper.emitBarcodesDetectedEvent(this, barcodesDetected);
   }
 
-  public void onBarcodeDetectionError(RNBarcodeDetector barcodeDetector) {
+  public void onBarcodeDetectionError(StreamingBarcodeDetector barcodeDetector) {
     if (!mShouldGoogleDetectBarcodes) {
       return;
     }

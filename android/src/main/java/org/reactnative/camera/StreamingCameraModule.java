@@ -11,7 +11,7 @@ import com.google.zxing.BarcodeFormat;
 import org.reactnative.barcodedetector.BarcodeFormatUtils;
 import org.reactnative.camera.tasks.ResolveTakenPictureAsyncTask;
 import org.reactnative.camera.utils.ScopedContext;
-import org.reactnative.facedetector.RNFaceDetector;
+import org.reactnative.facedetector.StreamingFaceDetector;
 import com.google.android.cameraview.Size;
 
 import javax.annotation.Nullable;
@@ -92,8 +92,8 @@ public class StreamingCameraModule extends ReactContextBaseJavaModule {
           private Map<String, Object> getFaceDetectionModeConstants() {
             return Collections.unmodifiableMap(new HashMap<String, Object>() {
               {
-                put("fast", RNFaceDetector.FAST_MODE);
-                put("accurate", RNFaceDetector.ACCURATE_MODE);
+                put("fast", StreamingFaceDetector.FAST_MODE);
+                put("accurate", StreamingFaceDetector.ACCURATE_MODE);
               }
             });
           }
@@ -101,8 +101,8 @@ public class StreamingCameraModule extends ReactContextBaseJavaModule {
           private Map<String, Object> getFaceDetectionClassificationsConstants() {
             return Collections.unmodifiableMap(new HashMap<String, Object>() {
               {
-                put("all", RNFaceDetector.ALL_CLASSIFICATIONS);
-                put("none", RNFaceDetector.NO_CLASSIFICATIONS);
+                put("all", StreamingFaceDetector.ALL_CLASSIFICATIONS);
+                put("none", StreamingFaceDetector.NO_CLASSIFICATIONS);
               }
             });
           }
@@ -110,8 +110,8 @@ public class StreamingCameraModule extends ReactContextBaseJavaModule {
           private Map<String, Object> getFaceDetectionLandmarksConstants() {
             return Collections.unmodifiableMap(new HashMap<String, Object>() {
               {
-                put("all", RNFaceDetector.ALL_LANDMARKS);
-                put("none", RNFaceDetector.NO_LANDMARKS);
+                put("all", StreamingFaceDetector.ALL_LANDMARKS);
+                put("none", StreamingFaceDetector.NO_LANDMARKS);
               }
             });
           }

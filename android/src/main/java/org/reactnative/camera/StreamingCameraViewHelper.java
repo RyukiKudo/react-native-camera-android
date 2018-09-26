@@ -20,8 +20,8 @@ import com.google.android.gms.vision.text.TextBlock;
 import com.google.zxing.Result;
 import org.reactnative.camera.events.*;
 import org.reactnative.camera.utils.ImageDimensions;
-import org.reactnative.barcodedetector.RNBarcodeDetector;
-import org.reactnative.facedetector.RNFaceDetector;
+import org.reactnative.barcodedetector.StreamingBarcodeDetector;
+import org.reactnative.facedetector.StreamingFaceDetector;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -207,8 +207,8 @@ public class StreamingCameraViewHelper {
     reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher().dispatchEvent(event);
   }
 
-  public static void emitFaceDetectionErrorEvent(ViewGroup view, RNFaceDetector faceDetector) {
-    FaceDetectionErrorEvent event = FaceDetectionErrorEvent.obtain(view.getId(), faceDetector);
+  public static void emitFaceDetectionErrorEvent(ViewGroup view, StreamingFaceDetector faceDetector) {
+    StreamingFaceDetectionErrorEvent event = StreamingFaceDetectionErrorEvent.obtain(view.getId(), faceDetector);
     ReactContext reactContext = (ReactContext) view.getContext();
     reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher().dispatchEvent(event);
   }
@@ -228,8 +228,8 @@ public class StreamingCameraViewHelper {
     reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher().dispatchEvent(event);
   }
 
-  public static void emitBarcodeDetectionErrorEvent(ViewGroup view, RNBarcodeDetector barcodeDetector) {
-    BarcodeDetectionErrorEvent event = BarcodeDetectionErrorEvent.obtain(view.getId(), barcodeDetector);
+  public static void emitBarcodeDetectionErrorEvent(ViewGroup view, StreamingBarcodeDetector barcodeDetector) {
+    StreamingBarcodeDetectionErrorEvent event = StreamingBarcodeDetectionErrorEvent.obtain(view.getId(), barcodeDetector);
     ReactContext reactContext = (ReactContext) view.getContext();
     reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher().dispatchEvent(event);
   }
