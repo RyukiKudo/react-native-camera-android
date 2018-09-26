@@ -9,7 +9,7 @@ import com.facebook.react.uimanager.UIManagerModule;
 import com.google.android.cameraview.AspectRatio;
 import com.google.zxing.BarcodeFormat;
 import org.reactnative.barcodedetector.BarcodeFormatUtils;
-import org.reactnative.camera.tasks.ResolveTakenPictureAsyncTask;
+import org.reactnative.camera.tasks.StreamingResolveTakenPictureAsyncTask;
 import org.reactnative.camera.utils.ScopedContext;
 import org.reactnative.facedetector.StreamingFaceDetector;
 import com.google.android.cameraview.Size;
