@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/notification_bg_low_pressed.9.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable-hdpi-v4/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/googleg_disabled_color_18.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable-hdpi-v4/googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/notification_bg_normal.9.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/notification_bg_low_normal.9.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/googleg_standard_color_18.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable-hdpi-v4/googleg_standard_color_18.png"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+    }
+]

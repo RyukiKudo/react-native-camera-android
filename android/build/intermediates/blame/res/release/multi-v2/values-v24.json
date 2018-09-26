@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v24/values-v24.xml",
+            "map": [
+                {
+                    "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1e6ad8a9c598f380ddddc252d9dd4a2d/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,121,182,248",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "116,177,243,310"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/values-v24/values-v24.xml",
+            "map": [
+                {
+                    "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1e6ad8a9c598f380ddddc252d9dd4a2d/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,121,182,248",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "116,177,243,310"
+                    }
+                }
+            ]
+        }
+    ]
+}

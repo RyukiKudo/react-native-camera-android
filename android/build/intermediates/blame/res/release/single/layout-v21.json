@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

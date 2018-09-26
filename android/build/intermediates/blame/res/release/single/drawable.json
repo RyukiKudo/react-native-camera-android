@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/notification_bg.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/notification_icon_background.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/notification_bg_low.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3f350e4667aeeb7e2de30eb86bc025e0/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_icon_light_normal.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "/Users/ryukikudo/Library/Mobile Documents/com~apple~CloudDocs/Dev/fabrica/carpon_webview_test/carpon_front/node_modules/react-native-camera/android/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/Users/ryukikudo/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/0ad187d930f06fed094fa0f13adfeee4/res/drawable/common_google_signin_btn_icon_dark.xml"
+    }
+]
